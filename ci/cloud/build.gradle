@@ -6,6 +6,7 @@
  */
 
 import com.sun.org.apache.xalan.internal.xslt.Process
+import org.estf.gradle.HelloClusterTask
 import org.estf.gradle.SetupCloudCluster
 import org.estf.gradle.DeleteCloudCluster
 import org.estf.gradle.ShellCommand
@@ -41,6 +42,8 @@ def genCleanupTask(testname, clusterId) {
         cluster_id = clusterId
     }
 }
+
+task spinUpDownCluster(type: HelloClusterTask)
 
 /*
  Kibana
